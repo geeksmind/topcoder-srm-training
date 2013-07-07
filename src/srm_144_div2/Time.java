@@ -30,6 +30,7 @@ public class Time {
 		// TODO Auto-generated method stub
 		Time t = new Time();
 		System.out.println(t.whatTime(3661));
+		System.out.println("hello world");
 	}
 
 }
