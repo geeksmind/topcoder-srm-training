@@ -1,4 +1,4 @@
 topcoder-srm-training
 =====================
 
-topcoder single round match training
+Topcoder single round match training
