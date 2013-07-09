@@ -36,7 +36,7 @@ public class BinaryCode {
 			else
 				p[i + 1] = q[i] - p[i - 1] - p[i];
 			/*
-			 * q[len - 1] is never be used
+			 * note that: q[len - 1] (last encrypted code digit) has not been used
 			 */
 
 			if (p[i + 1] != 1 && p[i + 1] != 0) {
@@ -69,7 +69,7 @@ public class BinaryCode {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryCode bc = new BinaryCode();
-		String q = "22111";
+		String q = "123210120";
 		System.out.println(Arrays.toString(bc.decode(q)));
 	}
 }
