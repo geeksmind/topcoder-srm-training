@@ -10,9 +10,6 @@ package srm_144_div2.araragi;
 
 public class Time {
 
-    /**
-     * @param args
-     */
     public String whatTime(int seconds) {
 	int hour = seconds / 60 / 60;
 	int min = (seconds - hour * 60 * 60) / 60;
@@ -21,7 +18,6 @@ public class Time {
     }
 
     public static void main(String[] args) {
-	// TODO Auto-generated method stub
 	Time t = new Time();
 	System.out.println(t.whatTime(3661));
 	System.out.println("hello world");

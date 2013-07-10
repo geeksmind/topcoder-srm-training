@@ -24,30 +24,21 @@ public class BinaryCode {
 	if (q[len - 1] != 0 && q[len - 1] != 1 && q[q.length - 1] != 2)
 	    return "NONE";
 
-	for (int i = 0; i < len - 1; i++) {
+	for (int i = 1; i < len; i++) {
 
-	    // special case for the first encrypted code digit
-	    if (i == 0)
-		p[i + 1] = q[i] - p[i];
+	    // test first and last digit of original code
+	    if (i == 1)
+		p[i] = q[i - 1] - p[i - 1];
+	    else if (i == len - 1)
+		p[i] = q[i] - p[i - 1];
 	    else
-		p[i + 1] = q[i] - p[i - 1] - p[i];
-	    /*
-	     * note that: q[len - 1] (last encrypted code digit) has not been used
-	     */
+		p[i] = q[i - 1] - p[i - 1] - p[i - 2];
+	  
 
-	    if (p[i + 1] != 1 && p[i + 1] != 0) {
+	    if (p[i] != 1 && p[i] != 0) {
 		return "NONE";
 	    }
 	}
-
-	/*
-	 * using last encrypted code digit to test the correctness of last
-	 * original code digit
-	 */
-	if (p[len - 1] + p[len - 2] != q[len - 1]) {
-	    return "NONE";
-	}
-
 	return Arrays.toString(p).replaceAll("(\\[|\\]|,| )", "");
     }
 
@@ -59,11 +50,7 @@ public class BinaryCode {
 	return new String[] { recover(encrypted, 0), recover(encrypted, 1) };
     }
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
-	// TODO Auto-generated method stub
 	BinaryCode bc = new BinaryCode();
 	String q = "123210120";
 	System.out.println(Arrays.toString(bc.decode(q)));
