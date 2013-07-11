@@ -20,7 +20,5 @@ public class Time {
     public static void main(String[] args) {
 	Time t = new Time();
 	System.out.println(t.whatTime(3661));
-	System.out.println("hello world");
     }
-
 }
