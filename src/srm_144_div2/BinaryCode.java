@@ -1,4 +1,4 @@
-package srm_144_div2.sean;
+package srm_144_div2;
 
 public class BinaryCode {
 

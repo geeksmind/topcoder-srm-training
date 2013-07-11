@@ -1,6 +1,6 @@
-package srm_144_div2.sean;
+package srm_144_div2;
 
-public class BinaryCode {
+public class BinaryCodeSean {
 
 	/**
 	 * @param args
@@ -35,7 +35,7 @@ public class BinaryCode {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BinaryCode test = new BinaryCode();
+		BinaryCodeSean test = new BinaryCodeSean();
 		String[] printtest = test.decode("123210122");
 		System.out.println(printtest[0]+","+printtest[1]);
 	}
