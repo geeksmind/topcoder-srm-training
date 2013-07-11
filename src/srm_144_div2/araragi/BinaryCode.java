@@ -40,7 +40,6 @@ public class BinaryCode {
 	    }
 	}
 	return Arrays.toString(p).replaceAll("(\\[|\\]|,| )", ""); 
-	//What's this for and wouldn't it overwrite "NONE"?
     }
 
     public String[] decode(String message) {
