@@ -39,7 +39,7 @@ public class BinaryCode {
 		return "NONE";
 	    }
 	}
-	return Arrays.toString(p).replaceAll("(\\[|\\]|,| )", ""); 
+	return Arrays.toString(p).replaceAll("\\[|\\]|,| ", ""); 
     }
 
     public String[] decode(String message) {
@@ -52,7 +52,7 @@ public class BinaryCode {
 
     public static void main(String[] args) {
 	BinaryCode bc = new BinaryCode();
-	String q = "123210120";
+	String q = "123210122";
 	System.out.println(Arrays.toString(bc.decode(q)));
     }
 }
