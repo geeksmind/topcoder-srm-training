@@ -82,8 +82,6 @@ public class Lottery {
 	    String nm = pair[0];
 	    String[] opts = pair[1].split(" ");
 	    gameList[i] = new Game(nm, Integer.parseInt(opts[0]), Integer.parseInt(opts[1]), opts[2].equals("T") ? true : false, opts[3].equals("T") ? true : false);
-	    // System.out.println(gameList[i].getName() + " <==> " +
-	    // gameList[i].getNbValidTicket());
 	}
 
 	for (int i = 0; i < gameList.length; i++) {
